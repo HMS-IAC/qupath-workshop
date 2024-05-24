@@ -10,4 +10,6 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   intro_image_analysis.rst
+   01_intro_image_analysis.rst
+   02_intro_qupath.rst
+   03_GUI_layout.rst
