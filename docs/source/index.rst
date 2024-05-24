@@ -23,7 +23,7 @@ Contents
 
    01_intro_image_analysis.rst
    02_intro_qupath.rst
-   03_qupath_projects_layout.rst
+   03_qupath_projects_and_GUI.rst
    04_cell_detection.rst
    05_cell_classification.rst
    06_tissue_annotation.rst
