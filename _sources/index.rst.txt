@@ -7,11 +7,11 @@
 Introduction to Bioimage Analysis using QuPath
 ==================================================
 
-This workshop introduces participants to the main ideas of bioimage analysis using the open-source software QuPath. 
-It is designed as a primer on QuPath for biologists who need to analyze images part of their research.
+This deck of slides introduces participants to the main ideas of bioimage analysis using the open-source software QuPath. 
+It is designed as a primer on QuPath for busy biologists who need to analyze images part of their research.
 
 
-This workshop is primarly taught in-person at Harvard Medical School - organized by the <a href="https://iac.hms.harvard.edu/">Image Analysis Collaboratory</a>.
+These materials were initially designed for a workshop taught in-person at Harvard Medical School - organized by the `Image Analysis Collaboratory <https://iac.hms.harvard.edu/>`__.
 
 
 
