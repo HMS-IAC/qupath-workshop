@@ -15,7 +15,7 @@ jobs:
 
       - name: Copy HTML to root directory
         run: |
-          rsync -av --delete ./docs/build/html/ ./
+          rsync -av --delete /docs/build/html/ /
         working-directory: ${{ github.workspace }}/..
         
       - name: Commit and push changes
