@@ -30,5 +30,5 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 html_theme = 'furo'
 html_static_path = ['_static']
-html_logo = "_static/email-signature.png"  # Specify the path to your logo file
+html_logo = "_static/iac-hms-logo.png"  # Specify the path to your logo file
 html_title = 'QuPath Workshop at Harvard Medical School'
