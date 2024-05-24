@@ -3,7 +3,7 @@ name: "Sphinx: Render docs"
 on:
   push:
     branches:
-      - gh-pages
+      - main
 
 jobs:
   build:
@@ -13,12 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build HTML
-        uses: ammaraskar/sphinx-action@master
-
       - name: Copy HTML to root directory
         run: |
-          rsync -av ./docs/build/html/ ./
+          rsync -av --delete ./docs/build/html/ ./
         working-directory: ${{ github.workspace }}/..
         
       - name: Commit and push changes
