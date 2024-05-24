@@ -4,6 +4,17 @@
    contain the root `toctree` directive.
 
 
+Introduction to Bioimage Analysis using QuPath
+==================================================
+
+This workshop introduces participants to the main ideas of bioimage analysis using the open-source software QuPath. 
+It is designed as a primer on QuPath for biologists who need to analyze images part of their research.
+
+
+This workshop is primarly taught in-person at Harvard Medical School - organized by the <a href="https://iac.hms.harvard.edu/">Image Analysis Collaboratory</a>.
+
+
+
 Contents
 =======================================
 

@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'QuPath workshop at HMS'
+project = 'QuPath Workshop at Harvard Medical School'
 copyright = '2024, Antoine A. Ruzette, Simon F. Nørrelykke'
 author = 'Antoine A. Ruzette, Simon F. Nørrelykke'
 
@@ -30,3 +30,5 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 html_theme = 'furo'
 html_static_path = ['_static']
+html_logo = "_static/email-signature.png"  # Specify the path to your logo file
+html_title = 'QuPath Workshop at Harvard Medical School'
