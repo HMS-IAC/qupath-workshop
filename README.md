@@ -1,6 +1,6 @@
-# Modifying Documentation with Sphinx
+# Update materials with Sphinx
 
-This repository uses Sphinx to generate documentation from reStructuredText (reST) files.
+This repository uses Sphinx to generate documentation from reStructuredText (reST) files. Typically, one would simply modify the slides and replace the relevant file in `docs/source`. Then, file paths have to be updated in the documentation as described below. 
 
 ## Getting Started
 
