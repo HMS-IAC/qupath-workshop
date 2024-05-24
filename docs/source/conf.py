@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'QuPath Workshop at Harvard Medical School'
-copyright = '2024, Antoine A. Ruzette, Simon F. Nørrelykke'
+copyright = '2024, Antoine A. Ruzette, Simon F. Nørrelykke. Licensed under CC-BY 4.0 International.'
 author = 'Antoine A. Ruzette, Simon F. Nørrelykke'
 
 # -- General configuration ---------------------------------------------------
