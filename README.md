@@ -7,7 +7,7 @@ This work is licensed under a
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
 # QuPath workshop at Harvard Medical School
-This deck of slides introduces participants to the main ideas of bioimage analysis using the open-source software QuPath. It is designed as a primer on QuPath for busy biologists who need to analyze images part of their research. These materials were initially designed for a workshop taught in-person at Harvard Medical School - organized by the [Image Analysis Collaboratory](https://iac.hms.harvard.edu/). 
+This deck of slides introduces participants to the main ideas of bioimage analysis using the open-source software [QuPath](https://qupath.github.io/). It is designed as a primer on QuPath for biologists who need to analyze images part of their research. These materials were initially designed for a workshop taught in-person at Harvard Medical School - organized by the [Image Analysis Collaboratory](https://iac.hms.harvard.edu/). 
 
 # Update materials with Sphinx
 
