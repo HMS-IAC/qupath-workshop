@@ -13,7 +13,8 @@ It is designed as a primer on QuPath for busy biologists who need to analyze ima
 
 These materials were initially designed for a workshop taught in-person at Harvard Medical School - organized by the `Image Analysis Collaboratory <https://iac.hms.harvard.edu/>`__.
 
-
+<b> Download the course materials </b>
+1. Slides: [Download PDF](docs/source/all_slides.pdf)
 
 Contents
 =======================================

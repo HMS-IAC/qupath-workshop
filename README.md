@@ -32,7 +32,7 @@ To modify the content of this repository, follow these steps:
 3. **Install Sphinx**: If you haven't already installed Sphinx, you can do so using pip. `furo` is the Sphinx theme used. 
 
     ```bash
-    pip install sphinx furo 
+    pip install sphinx furo sphinx_copybutton
     ```
 
 4. **Navigate to /docs**: Navigate to the directory containing the documentation source files.
@@ -60,6 +60,7 @@ To modify the content of this repository, follow these steps:
 10. **Commit and Push Changes**: After verifying that the documentation looks as expected, commit your changes and push them to the repository.
 
     ```bash
+    cd ..
     git add .
     git commit -m "Update documentation"
     git push
