@@ -1,5 +1,5 @@
-**Introduction to image analysis**
-----------------------------------------
+Introduction to image analysis
+====================================
 
 .. raw:: html
 
