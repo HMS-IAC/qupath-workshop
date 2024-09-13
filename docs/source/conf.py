@@ -18,6 +18,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
     "sphinx_copybutton",
+    "sphinx_multiversion",
 ]
 autodoc_typehints = "both"
 napoleon_use_ivar = True
@@ -32,3 +33,10 @@ html_theme = 'furo'
 html_static_path = ['_static']
 html_logo = "_static/iac-hms-logo.png"  # Specify the path to your logo file
 html_title = 'QuPath Workshop at Harvard Medical School'
+
+# -- Options for sphinx-multiversion -----------------------------------------
+# Whitelist branch names in the format YYYY_MM_DD
+smv_branch_whitelist = r'^\d{4}_\d{2}_\d{2}$'
+
+# (Optional) Exclude all other branches if needed
+smv_branch_exclude = r'^.*$'
