@@ -1,8 +1,33 @@
 {% if versions %}
-<h3>{{ _('Versions') }}</h3>
+<h3>{{ _('Previous editions:') }}</h3>
 <ul>
   {%- for item in versions %}
-  <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+    {%- set parts = item.name.split('_') %}
+    {%- if parts|length == 3 and parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit() %}
+      {%- set year = parts[0] %}
+      {%- set month = parts[1]|int %}
+      {%- set day = parts[2]|int %}
+      
+      {# Convert month number to month name #}
+      {%- set month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] %}
+      {%- set month_name = month_names[month - 1] %}
+
+      {# Function to get the ordinal suffix for the day #}
+      {%- macro ordinal_suffix(day) %}
+        {%- if day in [11, 12, 13] %}
+          {{ day }}th
+        {%- else %}
+          {{ day }}{% if day % 10 == 1 %}st{% elif day % 10 == 2 %}nd{% elif day % 10 == 3 %}rd{% else %}th{% endif %}
+        {%- endif %}
+      {%- endmacro %}
+      
+      {# Display date in "Month DaySuffix, Year" format #}
+      <li>
+        <a href="{{ item.url }}">{{ month_name }} {{ ordinal_suffix(day) }}, {{ year }}</a>
+      </li>
+    {%- else %}
+      <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+    {%- endif %}
   {%- endfor %}
 </ul>
 {% endif %}

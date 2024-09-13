@@ -19,6 +19,8 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = 'pydata_sphinx_theme'
+html_logo = "_static/iac-hms-logo.png"
+html_title = 'QuPath Workshop at Harvard Medical School'
 
 # PyData theme options
 html_theme_options = {
@@ -27,17 +29,16 @@ html_theme_options = {
     },
     'navbar_end': ['navbar-icon-links'],  # Keep this simple since we use the custom version list
     'navbar_persistent': ['search-field'],  # Keep the search field persistent
+    "navbar_align": "left",
 }
 
 # Sidebar settings for navigation and custom versioning
 html_sidebars = {
-    "**": ["sidebar-nav-bs", "search-field", "versions.html"],  # Include the custom version list
+    "**": ["sidebar-nav-bs", "versions.html"],  # Include the custom version list
 }
 
 html_static_path = ['_static']
 html_extra_path = ['.']
-html_logo = "_static/iac-hms-logo.png"
-html_title = 'QuPath Workshop at Harvard Medical School'
 
 # -- Options for sphinx-multiversion -----------------------------------------
 smv_branch_whitelist = r'^\d{4}_\d{2}_\d{2}$'  # Match branches with date format
