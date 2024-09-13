@@ -24,7 +24,7 @@ The following materials were developed for a workshop taught in-person at **Harv
   
   .. raw:: html
   
-     <p><a href="../_static/image_materials.zip" download>Download whole-slide image materials (ZIP)</a></p>
+     <p><a href="https://zenodo.org/records/13760745/files/workshop_example.zip?download=1" download>Download the .vsi whole-slide image (ZIP)</a></p>
 
 **Useful Links**
 ----------------
