@@ -1,5 +1,5 @@
-Tissue annotation and spatial measurements 
-=====================================================
+**Tissue annotation and spatial measurements** 
+-------------------------------------------------
 
 .. raw:: html
 

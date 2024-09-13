@@ -1,5 +1,5 @@
-QuPath projects and user-interface
-======================================
+**QuPath projects and user-interface**
+----------------------------------------
 
 .. raw:: html
 
