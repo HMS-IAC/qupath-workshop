@@ -27,9 +27,9 @@ html_theme_options = {
     'logo': {
         'text': 'QuPath Workshop',  # Use text if no image logo is available
     },
-    'navbar_end': ['navbar-icon-links'],  # Keep this simple since we use the custom version list
-    'navbar_persistent': ['search-field'],  # Keep the search field persistent
-    "navbar_align": "left",
+    'navbar_end': ['navbar-icon-links', 'theme-switcher'],  # Add the theme switcher to the navbar
+    "navbar_align": "left",  # Align navbar to the left
+    "theme_switcher": True,  # Enable dark and light mode switching
 }
 
 # Sidebar settings for navigation and custom versioning
