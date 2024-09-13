@@ -17,7 +17,7 @@ These materials were initially designed for a workshop taught in-person at Harva
 
 .. raw:: html
 
-   <p>1. Slides: <a href="docs/source/all_slides.pdf" download>Download PDF</a></p>
+   <p>1. Slides: <a href="docs/source/_static/all_slides.pdf" download>Download PDF</a></p>
 
 Contents
 =======================================

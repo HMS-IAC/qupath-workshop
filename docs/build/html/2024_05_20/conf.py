@@ -35,6 +35,7 @@ html_sidebars = {
 }
 
 html_static_path = ['_static']
+html_extra_path = ['.']
 html_logo = "_static/iac-hms-logo.png"
 html_title = 'QuPath Workshop at Harvard Medical School'
 
