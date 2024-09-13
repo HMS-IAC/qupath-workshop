@@ -37,14 +37,13 @@ Here are some helpful resources to complement the workshop materials:
 - `QuPath 0.5 Documentation <https://qupath.readthedocs.io/en/0.5/>`_
 - `QuPath Discussions on Image.sc Forum <https://forum.image.sc/tag/qupath>`_
 
-Contents
+Topics
 ========
 
 Below are the core sections of this workshop, each covering some aspects of bioimage analysis with QuPath.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Workshop Topics
 
    01_intro_image_analysis.rst
    02_intro_qupath.rst

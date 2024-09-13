@@ -1,5 +1,5 @@
-Cell detection and measurements
-======================================
+**Cell detection and measurements**
+----------------------------------------
 
 .. raw:: html
 
