@@ -22,6 +22,8 @@ The following materials were developed for a workshop taught in-person at **Harv
 
 - **Whole-slide image materials:**
   
+  Kudos to Nina Kozlova (Muranen Lab, BIDMC, HMS)for providing this example whole-slide image.
+
   .. raw:: html
   
      <p><a href="https://zenodo.org/records/13760745/files/workshop_example.zip?download=1" download>Download the .vsi whole-slide image (ZIP)</a></p>
