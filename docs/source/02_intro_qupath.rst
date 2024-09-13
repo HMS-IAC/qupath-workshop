@@ -1,5 +1,6 @@
-**Introduction to QuPath**
-----------------------------------------
+Introduction to QuPath
+====================================
+
 
 .. raw:: html
 

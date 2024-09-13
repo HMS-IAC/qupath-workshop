@@ -1,5 +1,5 @@
-**Scripting, workflows and batch processing**
-------------------------------------------------------
+Scripting, workflows and batch processing
+================================================
 
 .. raw:: html
 
