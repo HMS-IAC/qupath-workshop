@@ -28,8 +28,19 @@ html_theme_options = {
         'text': 'QuPath Workshop',  # Use text if no image logo is available
     },
     'navbar_end': ['navbar-icon-links', 'theme-switcher'],  # Add the theme switcher to the navbar
-    "navbar_align": "left",  # Align navbar to the left
     "theme_switcher": True,  # Enable dark and light mode switching
+    "icon_links": [
+        {
+            "name": "IAC",
+            "url": "https://iac.hms.harvard.edu/",
+            "icon": "fa-solid fa-globe",  # Icon for IAC
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/HMS-IAC",
+            "icon": "fa-brands fa-github",  # GitHub icon
+        }
+    ],
 }
 
 # Sidebar settings for navigation and custom versioning
