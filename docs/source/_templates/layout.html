@@ -1,0 +1,13 @@
+{% extends "!layout.html" %}
+
+{% block header %}
+  {{ super() }}
+  <div class="version-selector">
+    <label for="version-select">Version:</label>
+    <select id="version-select" onchange="window.location.href=this.value">
+      {% for version in versions %}
+      <option value="{{ version.url }}" {% if version.current %} selected {% endif %}>{{ version.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+{% endblock %}

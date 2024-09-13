@@ -34,7 +34,20 @@ html_static_path = ['_static']
 html_logo = "_static/iac-hms-logo.png"  # Specify the path to your logo file
 html_title = 'QuPath Workshop at Harvard Medical School'
 
-# -- Options for sphinx-multiversion -----------------------------------------
+# Furo theme options
+html_theme_options = {
+    "sidebar_hide_name": True,
+    # No 'version_dropdown' option here
+}
 
+# -- Options for sphinx-multiversion -----------------------------------------
+# Whitelist branch names in the format YYYY_MM_DD
+smv_branch_whitelist = r'^\d{4}_\d{2}_\d{2}$'
+
+# (Optional) Exclude all other branches if needed
+smv_branch_exclude = r'^.*$'
+smv_tag_whitelist = r'^$'
+# Exclude the 'main' branch explicitly
+smv_branch_exclude = r'^main$'
 # Set the HTML base URL for correct linking
 html_baseurl = 'https://hms-iac.github.io/qupath-workshop/'
