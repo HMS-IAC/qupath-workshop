@@ -18,6 +18,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
     "sphinx_copybutton",
+    "sphinx_multiversion",
 ]
 autodoc_typehints = "both"
 napoleon_use_ivar = True
@@ -32,3 +33,8 @@ html_theme = 'furo'
 html_static_path = ['_static']
 html_logo = "_static/iac-hms-logo.png"  # Specify the path to your logo file
 html_title = 'QuPath Workshop at Harvard Medical School'
+
+# -- Options for sphinx-multiversion -----------------------------------------
+
+# Set the HTML base URL for correct linking
+html_baseurl = 'https://hms-iac.github.io/qupath-workshop/'
