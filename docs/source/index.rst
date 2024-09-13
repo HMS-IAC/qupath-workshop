@@ -18,7 +18,7 @@ The following materials were developed for a workshop taught in-person at **Harv
   
   .. raw:: html
   
-     <p><a href="../_static/all_slides.pdf" download>Download all slides (PDF)</a></p>
+     <p><a href="_static/all_slides.pdf" download>Download all slides (PDF)</a></p>
 
 - **Whole-slide image materials:**
   
