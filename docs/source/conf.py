@@ -40,3 +40,5 @@ smv_branch_whitelist = r'^\d{4}_\d{2}_\d{2}$'
 
 # (Optional) Exclude all other branches if needed
 smv_branch_exclude = r'^.*$'
+# Exclude the 'main' branch explicitly
+smv_branch_exclude = r'^main$'
