@@ -42,3 +42,5 @@ smv_branch_whitelist = r'^\d{4}_\d{2}_\d{2}$'
 smv_branch_exclude = r'^.*$'
 # Exclude the 'main' branch explicitly
 smv_branch_exclude = r'^main$'
+# Set the HTML base URL for correct linking
+html_baseurl = 'https://hms-iac.github.io/qupath-workshop/'
