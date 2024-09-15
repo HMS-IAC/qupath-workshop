@@ -1,5 +1,5 @@
 Cell detection and measurements
-=========================================
+===============================
 
 .. raw:: html
 
@@ -7,20 +7,23 @@ Cell detection and measurements
 
 
 **Practice**
----------------
+------------
 
 3. QuPath cell detection
+
    a. Threshold-based cell detection
+
       1. Within the ROI created in 2, detect nuclei in the DAPI channel using QuPath’s built-in cell detection method
          - Use default parameters: how many nuclei are detected?
-         - Change sigma used for gaussian method: how does the number of detected nuclei change?
+         - Change sigma used for the Gaussian method: how does the number of detected nuclei change?
          - Change the intensity threshold: how does the number of detected nuclei change?
          - Change the cell expansion (in microns): do you notice a difference in cell size?
 
-      Tip 1: Re-running cell detection will overwrite existing detections.
+      Tip 1: Re-running cell detection will overwrite existing detections.  
       Tip 2: Start with default, make small changes then larger changes until obtaining a satisfying segmentation.
 
    b. Machine learning-based cell detection
+
       1. Within the ROI created in 2, detect nuclei in the DAPI channel using StarDist’s extension in QuPath
          - Use default parameters: how many nuclei are detected?
          - Change detection probability: how many nuclei are detected?
