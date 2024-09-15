@@ -501,22 +501,24 @@ document.write(`
 <h1>Tissue annotation and spatial measurements<a class="headerlink" href="#tissue-annotation-and-spatial-measurements" title="Link to this heading">#</a></h1>
 <iframe src="_static/06_tissue_annotation_and_spatial.pdf" width="100%" height="600px"></iframe><section id="practice">
 <h2><strong>Practice</strong><a class="headerlink" href="#practice" title="Link to this heading">#</a></h2>
-<ol class="arabic" start="5">
-<li><p>Automating tissue annotation
-a. Pixel-based classification</p>
-<blockquote>
-<div><ol class="arabic simple">
+<ol class="arabic simple" start="5">
+<li><p>Automating tissue annotation</p>
+<ol class="loweralpha simple">
+<li><p>Pixel-based classification</p>
+<ol class="arabic simple">
 <li><p>Create a pixel classifier on the TRITC channel and apply it with default parameters.
 - What is the area of the annotated region?</p></li>
 <li><p>Adapt the parameters of the pixel classifier to yield coherent regions.
 - How does the area of the annotated region change with smoothing sigma?
 - How does the area of the annotated region change with intensity threshold?</p></li>
 </ol>
-</div></blockquote>
-<ol class="loweralpha simple" start="2">
-<li><p>Machine learning pixel classifier
-1. Based on what you have learned by creating a machine learning classifier for cell objects, create training annotations for whole regions (akin to tissues) using the paint brush.
-2. Train a pixel classifier on these training data to identify regions of high signal intensity in the TRITC channel.</p></li>
+</li>
+<li><p>Machine learning pixel classifier</p>
+<ol class="arabic simple">
+<li><p>Based on what you have learned by creating a machine learning classifier for cell objects, create training annotations for whole regions (akin to tissues) using the paint brush.</p></li>
+<li><p>Train a pixel classifier on these training data to identify regions of high signal intensity in the TRITC channel.</p></li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
