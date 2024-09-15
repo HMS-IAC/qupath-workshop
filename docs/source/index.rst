@@ -54,3 +54,9 @@ Below are the core sections of this workshop, each covering some aspects of bioi
    05_cell_classification.rst
    06_tissue_annotation.rst
    07_scripting_workflows.rst
+   08_feedback.rst
+
+
+**Feedback**
+------------
+Please take a few minutes to fill out the `feedback form <https://tinyurl.com/52hu7bkt>`.
