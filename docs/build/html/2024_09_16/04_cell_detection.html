@@ -506,21 +506,27 @@ document.write(`
 <ol class="loweralpha">
 <li><p>Threshold-based cell detection</p>
 <ol class="arabic simple">
-<li><p>Within the ROI created in 2, detect nuclei in the DAPI channel using QuPath’s built-in cell detection method
-- Use default parameters: how many nuclei are detected?
-- Change sigma used for the Gaussian method: how does the number of detected nuclei change?
-- Change the intensity threshold: how does the number of detected nuclei change?
-- Change the cell expansion (in microns): do you notice a difference in cell size?</p></li>
+<li><p>Within the ROI created in 2, detect nuclei in the DAPI channel using QuPath’s built-in cell detection method</p>
+<ul class="simple">
+<li><p>Use default parameters: how many nuclei are detected?</p></li>
+<li><p>Change sigma used for the Gaussian method: how does the number of detected nuclei change?</p></li>
+<li><p>Change the intensity threshold: how does the number of detected nuclei change?</p></li>
+<li><p>Change the cell expansion (in microns): do you notice a difference in cell size?</p></li>
+</ul>
+</li>
 </ol>
-<p>Tip 1: Re-running cell detection will overwrite existing detections.
-Tip 2: Start with default, make small changes then larger changes until obtaining a satisfying segmentation.</p>
+<p>Tip 1: Re-running cell detection will overwrite existing detections.</p>
+<p>Tip 2: Start with default, make small changes then larger changes until obtaining a satisfying segmentation.</p>
 </li>
 <li><p>Machine learning-based cell detection</p>
 <ol class="arabic simple">
-<li><p>Within the ROI created in 2, detect nuclei in the DAPI channel using StarDist’s extension in QuPath
-- Use default parameters: how many nuclei are detected?
-- Change detection probability: how many nuclei are detected?
-- Compare segmentation results between threshold-based and ML-based cell detection (one way to do this is to run threshold-based nuclei detection in another ROI).</p></li>
+<li><p>Within the ROI created in 2, detect nuclei in the DAPI channel using StarDist’s extension in QuPath</p>
+<ul class="simple">
+<li><p>Use default parameters: how many nuclei are detected?</p></li>
+<li><p>Change detection probability: how many nuclei are detected?</p></li>
+<li><p>Compare segmentation results between threshold-based and ML-based cell detection (one way to do this is to run threshold-based nuclei detection in another ROI).</p></li>
+</ul>
+</li>
 </ol>
 </li>
 </ol>
