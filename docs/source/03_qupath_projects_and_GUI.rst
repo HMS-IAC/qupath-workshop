@@ -20,8 +20,11 @@ QuPath projects and user-interface
       1. Select one of the channels for display
       2. Zoom into the image to inspect the value of a single pixel, and note its value
       3. Adjust the Brightness & Contrast, and the LUT range (min/max)
+
          - How did the pixel value change?
+
       4. Change the LUT to grayscale or any other color
+      
          - How did the pixel value change?
 
    c. Multi-viewer
