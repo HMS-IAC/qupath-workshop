@@ -1,4 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
+import os
 
 # -- Project information -----------------------------------------------------
 project = 'QuPath Workshop at Harvard Medical School'
@@ -50,6 +51,11 @@ html_sidebars = {
 
 html_static_path = ['_static']
 html_extra_path = ['.']
+# Ensure that the _static folder is branch-specific
+if "smv_current_version" in globals():
+    html_static_path = [f'_static/{smv_current_version}']
+else:
+    html_static_path = ['_static']
 
 # -- Options for sphinx-multiversion -----------------------------------------
 smv_branch_whitelist = r'^\d{4}_\d{2}_\d{2}$'  # Match branches with date format
