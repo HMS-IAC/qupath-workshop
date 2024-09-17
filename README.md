@@ -32,7 +32,7 @@ To modify the content of this repository, follow these steps:
 3. **Install Sphinx**: If you haven't already installed Sphinx, you can do so using pip. `furo` is the Sphinx theme used. 
 
     ```bash
-    pip install sphinx furo sphinx_copybutton
+    pip install sphinx pydata_sphinx_theme sphinx_copybutton sphinx-multiversion
     ```
 
 4. **Navigate to /docs**: Navigate to the directory containing the documentation source files.
@@ -41,9 +41,7 @@ To modify the content of this repository, follow these steps:
     cd docs
     ```
 
-5. **Modify**: Edit the `.rst` files in the source directory to make changes to the documentation content. You can use any text editor to modify these files.
-
-6. **Build**: Once you've made your changes, rebuild the documentation using the `make` command.
+5. **Modify and build for as single version**: Edit the `.rst` files in the source directory to make changes to the documentation content. You can use any text editor to modify these files. Then, build the html files. 
 
     ```bash
     make clean
@@ -51,13 +49,22 @@ To modify the content of this repository, follow these steps:
 
     ```bash
     make html
+    ```: 
+
+6. **Build multiple versions with sphinx-multiversion**: The `sphinx-multiversion` extension allows control versions across github branches. The materials for an edition should be contained in its own branch. This extension will build the html files for each branch and version. It is recommended to run this command from the root directory of the `main` branch, and keep a `gh-pages` branch clean for page publication.
+
+    ```bash
+    cd docs
+    make clean
+    cd ..
+    sphinx-multiversion docs/source/ docs/build/html 
     ```
 
 8. **HTML files**: After building the documentation, you can view the updated the HTML files located in the `docs/build/html` directory.
 
-9. **Move the content of `docs/build/html` to root directory**: drog and drop the whole folder. 
+9. **Move the content of `docs/build/html` to root directory of gh-pages branch**: use a `tmp` folder, and drog and drop the folders (each folder contains the materials of a version) to the root of the publishing branch. 
 
-10. **Commit and Push Changes**: After verifying that the documentation looks as expected, commit your changes and push them to the repository.
+10. **Commit and Push Changes**: After verifying that the documentation looks as expected by opening local html file, commit your changes and push them to the repository.
 
     ```bash
     cd ..
