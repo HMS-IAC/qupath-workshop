@@ -1,5 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
-import os
+import subprocess
 
 # -- Project information -----------------------------------------------------
 project = 'QuPath Workshop at Harvard Medical School'
@@ -59,3 +59,22 @@ smv_tag_whitelist = r'^$'  # Exclude all tags
 
 # Set the HTML base URL for correct linking
 html_baseurl = 'https://hms-iac.github.io/qupath-workshop/'
+
+
+def get_current_branch():
+    try:
+        return subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD']).decode().strip()
+    except Exception:
+        return "unknown"
+
+
+current_branch = get_current_branch()
+print(f"Building documentation for branch: {current_branch}")
+
+# Extract version from branch name (assuming branch name is the version)
+current_version = current_branch
+
+# Pass 'current_version' to templates
+html_context = {
+    'current_version': current_version,
+}
