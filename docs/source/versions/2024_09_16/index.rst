@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 
-Welcome to the Introduction to Bioimage Analysis using QuPath!
+Welcome to Introduction to Bioimage Analysis using QuPath!
 ==============================================================
 
 This deck of slides introduces participants to the key concepts of bioimage analysis using the open-source software **QuPath**. It is designed as a primer for biologists who need to analyze images as part of their research but are new to image analysis.
@@ -24,7 +24,6 @@ The following materials were developed for a workshop taught in-person at **Harv
 
   .. raw:: html
   
-   ..   <p><a href="https://zenodo.org/records/13760745/files/workshop_example.zip?download=1" download>Download the .vsi whole-slide image (ZIP)</a></p>
      <p><a href="https://zenodo.org/records/13766331/files/example_image.zip?download=1" download>Download the .vsi whole-slide image (ZIP)</a></p>
   
   Kudos to Nina Kozlova (Muranen Lab, BIDMC, HMS) for providing this example whole-slide image.
