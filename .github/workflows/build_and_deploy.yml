@@ -1,0 +1,43 @@
+name: Build and Deploy Sphinx Documentation
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on push to the main branch
+    paths:
+      - 'docs/**'  # Only trigger the workflow when files in the docs directory change
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'  # Specify the Python version
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -U sphinx pydata_sphinx_theme sphinx_copybutton
+          
+      - name: Set executable permissions for build script
+        run: chmod +x docs/build_versions_gh.sh
+
+      - name: Build Sphinx documentation
+        run: |
+          bash docs/build_versions_gh.sh
+          touch docs/build/.nojekyll
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
+          publish_dir: ./docs/build  # Path to the HTML build directory
+          # Optional: Clean the gh-pages branch before publishing new files
+          keep_files: false
+          force_orphan: true  # Ensures that we create a fresh commit, overriding everything
