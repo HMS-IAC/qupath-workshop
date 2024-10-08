@@ -1,80 +1,91 @@
-# Configuration file for the Sphinx documentation builder.
-import subprocess
+import os
 
-# -- Project information -----------------------------------------------------
-project = 'QuPath Workshop at Harvard Medical School'
-copyright = '2024, Antoine A. Ruzette, Simon F. Nørrelykke'
-author = 'Antoine A. Ruzette, Simon F. Nørrelykke'
+# =============================================================================
+#                           Customizable Information
+# =============================================================================
 
-# -- General configuration ---------------------------------------------------
+# -- Project Information -----------------------------------------------------
+project = 'qupath-workshop'  # Change this to the name of your project
+author = 'Antoine A. Ruzette, Simon F. Nørrelykke'  # Set the author's name
+html_title = 'QuPath workshop'  # The title of the website
+
+# =============================================================================
+#                    Configuration Settings - Do Not Change
+# =============================================================================
+
+# -- Repository and URL Configuration ----------------------------------------
+# no need to change if your repository is hosted on the IAC-HMS GitHub
+iac_url = "https://iac.hms.harvard.edu/"  # Institution website URL
+github_url = "https://github.com/HMS-IAC"  # GitHub organization URL
+
+# Copyright information
+copyright = '(2024) Antoine A. Ruzette, Simon F. Nørrelykke'
+
+# -- General Sphinx Configuration --------------------------------------------
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
     "sphinx_copybutton",
-    "sphinx_multiversion",  # For versioning
 ]
 
-templates_path = ['_templates']  # Make sure the templates directory is included
+# Exclude patterns (add any files or directories you want to ignore)
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-# -- Options for HTML output -------------------------------------------------
+# -- HTML Output Configuration -----------------------------------------------
 html_theme = 'pydata_sphinx_theme'
-html_logo = "_static/iac-hms-logo.png"
-html_title = 'QuPath Workshop at Harvard Medical School'
 
-# PyData theme options
 html_theme_options = {
     'logo': {
-        'text': 'QuPath Workshop',  # Use text if no image logo is available
+        'text': html_title,
+        'image_light': os.path.join('_static', 'iac-hms-logo-light.png'),
+        'image_dark': os.path.join('_static', 'iac-hms-logo-dark.png'),
     },
-    'navbar_end': ['navbar-icon-links', 'theme-switcher'],  # Add the theme switcher to the navbar
-    "theme_switcher": True,  # Enable dark and light mode switching
-    "icon_links": [
+
+    'navbar_end': ['navbar-icon-links', 'theme-switcher'],
+    "navbar_persistent": [],
+    "navbar_center": [],
+    'icon_links': [
         {
             "name": "IAC",
-            "url": "https://iac.hms.harvard.edu/",
-            "icon": "fa-solid fa-globe",  # Icon for IAC
+            "url": iac_url,
+            "icon": "fa-solid fa-globe",
         },
         {
             "name": "GitHub",
-            "url": "https://github.com/HMS-IAC",
-            "icon": "fa-brands fa-github",  # GitHub icon
+            "url": github_url,
+            "icon": "fa-brands fa-github",
         }
     ],
 }
 
-# Sidebar settings for navigation and custom versioning
+
+# Templates path (global)
+templates_path = ['_templates']
+
+# Sidebar configuration
 html_sidebars = {
-    "**": ["sidebar-nav-bs", "versions.html"],  # Include the custom version list
+    "**": ["sidebar_versions.html", "globaltoc"],
 }
 
-html_static_path = ['_static']
-# html_extra_path = ['.']
+# -- Static Files Configuration ----------------------------------------------
+html_static_path = [os.path.abspath('_static')]
 
-# -- Options for sphinx-multiversion -----------------------------------------
-smv_branch_whitelist = r'^\d{4}_\d{2}_\d{2}$'  # Match branches with date format
-smv_branch_exclude = r'^main$'  # Exclude the 'main' branch
-smv_tag_whitelist = r'^$'  # Exclude all tags
+# -- Version Handling (Optional) ---------------------------------------------
+# Detect the current version and manage versions folder
+current_version = os.getenv('CURRENT_VERSION', None)
+versions_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../versions'))
 
-# Set the HTML base URL for correct linking
-html_baseurl = 'https://hms-iac.github.io/qupath-workshop/'
+if current_version:
+    version_static_path = os.path.join('versions', current_version, '_static')
+    if os.path.isdir(version_static_path):
+        html_static_path.insert(0, version_static_path)
+        print(f"Added {version_static_path} to html_static_path")
 
+# -- Automatically Detect and Display Versions ------------------------------
+versions_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'versions'))
+versions = [d for d in os.listdir(versions_dir) if os.path.isdir(os.path.join(versions_dir, d))]
 
-def get_current_branch():
-    try:
-        return subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD']).decode().strip()
-    except Exception:
-        return "unknown"
-
-
-current_branch = get_current_branch()
-print(f"Building documentation for branch: {current_branch}")
-
-# Extract version from branch name (assuming branch name is the version)
-current_version = current_branch
-
-# Pass 'current_version' to templates
 html_context = {
-    'current_version': current_version,
+    'versions': [{'name': v, 'url': f'/{project}/versions/{v}/index.html'} for v in versions],
 }
