@@ -54,7 +54,7 @@ Below are the core sections of this workshop, each covering some aspects of bioi
    05_cell_classification.rst
    06_tissue_annotation.rst
    07_scripting_workflows.rst
-
+   08_qupath_on_o2.rst
 
 **Feedback**
 ------------
@@ -62,4 +62,4 @@ Below are the core sections of this workshop, each covering some aspects of bioi
 .. toctree::
    :maxdepth: 1
 
-   08_feedback.rst
+   09_feedback.rst
